@@ -1,0 +1,12 @@
+<% @tasks.each do |task| %>
+<h2> <%= task.title %></h2>
+<p> <%= task.details %></p>
+<p> <%= task.completed %> </p>
+   <% if task.completed? %>
+   <i class="fa fa-check-square"></i>
+    <% else  %>
+    <i class="fa fa-square"></i>
+<% end %>
+<%= link_to(task.title, "task#show") %>
+
+<% end %>
